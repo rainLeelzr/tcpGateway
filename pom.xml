@@ -24,6 +24,13 @@
             <groupId>avatar.rain</groupId>
             <artifactId>core</artifactId>
         </dependency>
+
+        <!-- common-protobuf-->
+        <dependency>
+            <groupId>avatar.rain</groupId>
+            <artifactId>common-protobuf</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
