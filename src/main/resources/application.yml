@@ -49,6 +49,9 @@ zuul:
     path: /order/**
     serviceId: avatar-order
 
+avatar:
+ tcpServer:
+  enable: true
 
 ---
 spring:

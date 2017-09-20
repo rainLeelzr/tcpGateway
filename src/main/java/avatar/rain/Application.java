@@ -1,6 +1,5 @@
 package avatar.rain;
 
-import avatar.rain.core.net.tcp.EnableTcpServer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -15,7 +14,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableZuulProxy
-@EnableTcpServer
 public class Application {
 
     //启动服务时，开启debug日志模式：java -jar xxx.jar --debug
