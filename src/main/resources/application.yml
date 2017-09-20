@@ -40,6 +40,16 @@ spring:
    max-active: 8
    max-wait: 5000
 
+zuul:
+  routes:
+   im:
+    path: /im/**
+    serviceId: avatar-im
+   order:
+    path: /order/**
+    serviceId: avatar-order
+
+
 ---
 spring:
  profiles: dev1

@@ -21,8 +21,14 @@ public class AvatarApplicationListener implements ApplicationListener<ContextRef
     @Resource
     private TcpServer tcpServer;
 
+    private boolean alreadyInitialized = false;
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        if (alreadyInitialized) {
+            return;
+        }
+
         apiManager.init();
         protobufSerializationManager.init();
         new Thread("netty-starter") {
@@ -32,6 +38,8 @@ public class AvatarApplicationListener implements ApplicationListener<ContextRef
                 tcpServer.start();
             }
         }.start();
+
+        alreadyInitialized = true;
     }
 
 }

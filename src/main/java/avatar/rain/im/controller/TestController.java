@@ -10,12 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @RequestMapping("/hello")
-    @RequestCmd(cmd = 1, protobuf = "avatar.rain.im.protobuf.IM$SendTextToUserC2S")
-    public String hello(int toUserId, String message, User user) {
-        System.out.println("toUserId=" + toUserId);
-        System.out.println("message=" + message);
-        System.out.println("user=" + user);
-        System.out.println("imServer: /test/hello");
-        return "imServer: /test/hello";
+    @RequestCmd(url = "/test/hello", protobuf = "avatar.rain.im.protobuf.IM$SendTextToUserC2S")
+    public String hello(Integer toUserId, String message, User user) {
+        System.out.println("tcpGateway: /test/hello");
+        return "tcpGateway: /test/hello";
     }
 }
