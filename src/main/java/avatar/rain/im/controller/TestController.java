@@ -1,7 +1,7 @@
 package avatar.rain.im.controller;
 
 import avatar.rain.auth.entity.User;
-import avatar.rain.core.net.atcp.request.RequestCmd;
+import avatar.rain.core.net.tcp.request.RequestCmd;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
