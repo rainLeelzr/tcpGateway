@@ -29,6 +29,21 @@ spring:
   enableL2Cache: true
   jcache:
    config: classpath:ehcache.xml
+ extend:
+  rocketmq:
+   namesrvAddr: 192.168.1.132:9876
+   clientIP: 192.168.1.222
+   producer:
+    instanceName: ${info.name}
+    tranInstanceName: ${info.name}Tran
+   consumer:
+    instanceName: ${info.name}
+    subscriptions:
+     p2pMessage:
+      topic: p2pMessage
+      tag: '*'
+     p2gMessage:
+      topic: p2gMessage
 
  redis:
   host: 127.0.0.1
